@@ -37,7 +37,7 @@ public class ListSettingsAction extends ActionSupport  implements  RequestAware,
 	
 	public Account getModel() {
 		HttpSession session=ServletActionContext.getRequest().getSession();  
-		account= new Account("Sid","Baccam",99,"NC");
+		account= new Account("Sid","Baccam7",99,"NC");
 		account.setMiddleInitial("A.");
 		account.setLoginName((String)session.getAttribute("name"));
 		account.setEmail("Sid.Baccam@iem.com");
@@ -56,6 +56,7 @@ public class ListSettingsAction extends ActionSupport  implements  RequestAware,
 		
 		account.setSelectedUserGroupCodes(grp.getCode());
 //		accounts.add(account);
+		
 		return account;
 	}
 

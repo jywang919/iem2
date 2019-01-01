@@ -4,6 +4,7 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
  
 <struts>
+	<constant name="struts.mapper.action.prefix.enabled" value="true" />
 	<package name="user" namespace="/User" extends="struts-default">
 		<action name="Login" class="com.wang.demo.iem.struts2.user.action.LoginAction">
 			<result name="SUCCESS">pages/success.jsp</result>

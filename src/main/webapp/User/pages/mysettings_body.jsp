@@ -24,6 +24,11 @@
 	              <s:textfield name="middleInitial" label="Middle Initial" cols="1" rows="1"/>
 	              <s:textfield name="email" label="Email Address" cols="20" rows="1" />
 	              <s:textfield name="distinguishedName" label="SmartCard DN" cols="50" rows="1" />   
+	              <SCRIPT>
+	              	var y = document.getElementsByClassName('tdLabel');
+					/* for(var i=0;i<y.length;i++) y[i].align="right"; */
+					for(var i=0;i<y.length;i++) y[i].style="text-align:right;";
+				</SCRIPT>
              </td></tr>		
 		</table>
 	</td></tr>
