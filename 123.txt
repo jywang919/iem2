@@ -1,0 +1,4 @@
+https://www.mkyong.com/struts2/struts-2-hello-world-example/
+
+Test
+http://localhost:8080/iem2b/User/Login.action
