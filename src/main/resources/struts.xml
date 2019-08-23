@@ -8,8 +8,9 @@
 		<action name="Login">
 			<result>pages/login.jsp</result>
 		</action>
-		<action name="Welcome" class="com.wang.demo.struts2.iem.user.action.WelcomeUserAction">
+		<action name="Welcome" class="com.wang.demo.struts2.iem.user.action.WelcomeAction">
 			<result name="SUCCESS">pages/success.jsp</result>
+			<result name="FAILURE">pages/failure.jsp</result>
 		</action>
 	</package>
 	
