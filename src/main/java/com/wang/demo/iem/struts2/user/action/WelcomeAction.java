@@ -1,4 +1,4 @@
-package com.wang.demo.struts2.iem.user.action;
+package com.wang.demo.iem.struts2.user.action;
 
 public class WelcomeAction{
 
@@ -24,6 +24,8 @@ public class WelcomeAction{
 		this.password = password;
 	}
 
+
+	
 	// all struts logic here
 	public String execute() {
         if (null != this.getUsername() && null != this.getPassword()

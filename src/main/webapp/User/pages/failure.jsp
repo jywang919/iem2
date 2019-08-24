@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Struts 2 Failure</title>
+        <title>IEM Struts 2 Demo</title>
     </head>
     <body>
         <div style="color:red">

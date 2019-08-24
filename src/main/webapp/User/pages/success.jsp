@@ -1,8 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
-<head></head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>IEM Struts 2 Demo</title>
+    </head>
 <body>
 <h4>Login Success. Welcome <s:property value="username"/></h4>
+
 </body>
 </html>

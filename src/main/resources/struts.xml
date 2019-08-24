@@ -5,10 +5,10 @@
  
 <struts>
 	<package name="user" namespace="/User" extends="struts-default">
-		<action name="Login">
+		<action name="Login" class="com.wang.demo.iem.struts2.user.action.LoginAction">
 			<result>pages/login.jsp</result>
 		</action>
-		<action name="Welcome" class="com.wang.demo.struts2.iem.user.action.WelcomeAction">
+		<action name="Welcome" class="com.wang.demo.iem.struts2.user.action.WelcomeAction">
 			<result name="SUCCESS">pages/success.jsp</result>
 			<result name="FAILURE">pages/failure.jsp</result>
 		</action>
