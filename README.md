@@ -18,7 +18,7 @@
 	
 	The browser will show the login page
 	
-	Type same in the user name nd password will direct to a welcome page
+	Type same in the user name and password will direct to a welcome page
 	
 	otherwise, a failure page will be displayed
 	
