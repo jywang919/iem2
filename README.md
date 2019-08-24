@@ -2,13 +2,13 @@
 
 - Clone the project into your eclipse workspace
 
-1.	Convert it into a Maven:
+		1.	Convert it into a Maven:
 
-	Right click project -> Convert to Maven ...
+			Right click project -> Convert to Maven ...
 
-2.  Add a server run time
+		2.  Add a server run time
 
-3.	Add your local JRE to the project lib
+		3.	Add your local JRE to the project lib
 
 - Test the project:
 	
