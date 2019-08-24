@@ -2,9 +2,9 @@
 
 - Clone the project into your eclipse workspace
 
-		1.	Convert it into a Maven:
+		1.	 Convert it into a Maven:
 
-			Right click project -> Convert to Maven ...
+			Right click on the project -> Configure -> Convert to Maven Project
 
 		2.  Add a server run time
 
@@ -12,7 +12,7 @@
 
 - Test the project:
 	
-	Right click on the project -> Run on Server 
+	Right click on the project -> Run As -> Run on Server 
 	
 	Copy this URL to the browser: http://localhost:8080/iem2
 	
