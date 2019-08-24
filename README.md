@@ -14,7 +14,7 @@
 	
 	Right click on the project -> Run on Server 
 	
-	http://localhost:8080/iem2
+	Copy this URL to the browser: http://localhost:8080/iem2
 	
 	The browser will show the login page
 	
