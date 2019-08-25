@@ -6,12 +6,14 @@
 <struts>
 	<package name="user" namespace="/User" extends="struts-default">
 		<action name="Login" class="com.wang.demo.iem.struts2.user.action.LoginAction">
-			<result>pages/login.jsp</result>
-		</action>
-		<action name="Welcome" class="com.wang.demo.iem.struts2.user.action.WelcomeAction">
 			<result name="SUCCESS">pages/success.jsp</result>
 			<result name="FAILURE">pages/failure.jsp</result>
 			<result name="input">pages/login.jsp</result>
+			<result name="START">pages/login.jsp</result>
+		</action>
+		
+		<action name="Welcome" class="com.wang.demo.iem.struts2.user.action.WelcomeAction">
+			
 		</action>
 	</package>
 	

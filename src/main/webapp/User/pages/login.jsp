@@ -8,7 +8,7 @@
 <body>
 
 <s:actionerror/>
-<s:form action="Welcome">
+<s:form>
 	<s:textfield name="username" label="Username"/>
 	<s:password name="password" label="Password"/>
 	<s:submit value="Login"/>
