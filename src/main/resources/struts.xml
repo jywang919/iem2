@@ -11,6 +11,7 @@
 		<action name="Welcome" class="com.wang.demo.iem.struts2.user.action.WelcomeAction">
 			<result name="SUCCESS">pages/success.jsp</result>
 			<result name="FAILURE">pages/failure.jsp</result>
+			<result name="input">pages/login.jsp</result>
 		</action>
 	</package>
 	

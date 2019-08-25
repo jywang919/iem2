@@ -1,6 +1,8 @@
 package com.wang.demo.iem.struts2.user.action;
 
-public class WelcomeAction{
+import com.opensymphony.xwork2.ActionSupport;
+
+public class WelcomeAction extends ActionSupport{
 
     private final static String SUCCESS = "SUCCESS";
     private final static String FAILURE = "FAILURE";
@@ -25,7 +27,19 @@ public class WelcomeAction{
 	}
 
 
-	
+	public void validate() {
+		
+		//Action level error message
+		if(username.trim().length() < 1 || password.trim().length() < 1)
+			addActionError("Fields can't be blank");
+		
+		//Field level error message
+		if(username.length() < 1)	addFieldError("username","username can not be blank");
+		if(password.length() < 6)	addFieldError("password", "Password length must be greater than 5");
+		
+
+	}
+
 	// all struts logic here
 	public String execute() {
         if (null != this.getUsername() && null != this.getPassword()
