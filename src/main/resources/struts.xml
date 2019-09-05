@@ -15,6 +15,15 @@
 		<action name="Welcome" class="com.wang.demo.iem.struts2.user.action.WelcomeAction">
 			
 		</action>
+
+		<action name="ListSettings" class="com.wang.demo.iem.struts2.user.action.ListSettingsAction">
+			<result name="SUCCESS">pages/user-settings-body.jsp</result>
+		</action>
+		
+		<action name="changepassword" class="com.wang.demo.iem.struts2.user.action.ListSettingsAction" method="changePassword">
+			<result name="SUCCESS">pages/change-password.jsp</result>
+		</action>
+		
 	</package>
 	
 </struts>

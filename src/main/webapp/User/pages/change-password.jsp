@@ -6,7 +6,6 @@
         <title>IEM Struts 2 Demo</title>
     </head>
 <body>
-<h4>Login Success. Welcome <s:property value="username"/></h4>
-	<a href="ListSettings.action">My Settings</a> 
+	<h1> Welcome to password change page for <s:property value="#session.name"/></h1> 
 </body>
 </html>

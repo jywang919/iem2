@@ -1,8 +1,18 @@
 package com.wang.demo.iem.struts2.user.action;
 
-import com.opensymphony.xwork2.ActionSupport;
+import java.util.Map;
 
-public class LoginAction extends ActionSupport{
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.dispatcher.SessionMap;
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+import com.wang.demo.iem.struts2.user.domain.User;
+
+public class LoginAction extends ActionSupport implements SessionAware{  
 
 	private static int loginCount = 0;
 	
@@ -10,8 +20,12 @@ public class LoginAction extends ActionSupport{
     private final static String FAILURE = "FAILURE";
     private final static String  START="START";
     
+    private SessionMap<String,Object> sessionMap;  
+    
 	private String username;
 	private String password;
+	
+
 	
 	public int getLoginCount() {
 		return loginCount;
@@ -34,6 +48,7 @@ public class LoginAction extends ActionSupport{
 	}
 
 
+	
 	public void validate() {
 		if(null != username && null != password) {
 			//Action level error message
@@ -42,7 +57,7 @@ public class LoginAction extends ActionSupport{
 			
 			//Field level error message
 			if(username.length() < 1)	addFieldError("username","username can not be blank");
-			if(password.length() < 6)	addFieldError("password", "Password length must be greater than 5");
+			if(password.length() < 1)	addFieldError("password", "Password length must be greater than 1");
 		}
 	}
 
@@ -53,10 +68,25 @@ public class LoginAction extends ActionSupport{
         if (null != this.getUsername() && null != this.getPassword()
         		&& this.getUsername().length() > 0 && this.getPassword().length() > 0
         		&& this.getUsername().equals(this.getPassword())) {
+            storeLoginInSession();
             return SUCCESS;
         }
+        
 		return FAILURE;
 
 	}
+	
+	@Override
+	public void setSession(Map<String, Object> map) {
+		sessionMap=(SessionMap)map;  
+	}
+	
+	private void storeLoginInSession() {
+		HttpSession session=ServletActionContext.getRequest().getSession();  
+		   
+	    sessionMap.put("login","true");  
+	    sessionMap.put("name",this.getUsername());  
+	}
+
 	
 }
