@@ -3,10 +3,12 @@ package com.wang.demo.iem.struts2.user.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class Account {
 	
 	   private int id;
 	   private String lastName;
+	   private String middleInitial;
+	   
 	   private String firstName;
 	   private int marks;
 	   private String state;
@@ -19,9 +21,9 @@ public class User {
 	   
 	   private String selectedUserGroupCodes;
 	   
-	   private List<Group>  groups= new ArrayList<Group>();
+	   private List<Group>  allUserGroups= new ArrayList<Group>();
 	   
-	    public User(String firstName, String lastName, int marks, String state) {
+	    public Account(String firstName, String lastName, int marks, String state) {
 	        this.firstName = firstName;
 	        this.lastName = lastName;
 	        this.marks=marks;
@@ -44,7 +46,16 @@ public class User {
       this.lastName = lastName;
    }
    
-   public String getFirstName() {
+   
+   public String getMiddleInitial() {
+	return middleInitial;
+}
+
+public void setMiddleInitial(String middleInitial) {
+	this.middleInitial = middleInitial;
+}
+
+public String getFirstName() {
       return firstName;
    }
    
@@ -94,13 +105,12 @@ public void setLoginName(String loginName) {
 	this.loginName = loginName;
 }
 
-
-public List<Group> getGroups() {
-	return groups;
+public List<Group> getAllUserGroups() {
+	return allUserGroups;
 }
 
-public void setGroups(List<Group> groups) {
-	this.groups = groups;
+public void setAllUserGroups(List<Group> allUserGroups) {
+	this.allUserGroups = allUserGroups;
 }
 
 public String getSelectedUserGroupCodes() {

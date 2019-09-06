@@ -10,7 +10,7 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-import com.wang.demo.iem.struts2.user.domain.User;
+import com.wang.demo.iem.struts2.user.domain.Account;
 
 public class LoginAction extends ActionSupport implements SessionAware{  
 

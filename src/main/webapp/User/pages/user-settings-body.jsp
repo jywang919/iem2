@@ -21,11 +21,13 @@
 			<tr><td>
 				<table border=0 width="100%" cellpadding=2 cellspacing=2>
 						<tr><td><div align="right">
-								Login Name: <s:property value = "loginName"/></div>
+								Login ID:: <s:property value = "loginName"/></div>
 							</td></tr>
 							<tr><td><div align="right">First Name: <s:property value = "firstName"/></div>
 							</td></tr>
 						<tr><td><div align="right">Last Name: <s:property value = "lastName"/></div>	
+						</td></tr>
+						<tr><td><div align="right">Middle Initial: <s:property value = "middleInitial"/></div>	
 						</td></tr>
 	                    <tr><td><div align="right">Email Address: <s:property value = "email"/></div>
 	                    </td></tr>
@@ -41,13 +43,16 @@
 						<b><s:property value = "loginName"/></b> is assigned to the following <b>Groups</b>:
 				</td></tr>
 				<tr><td>
-				<div class="scroll">
-		            <s:iterator value = "groups">
-		                  <html:multibox disabled="true" property="selectedUserGroupCodes" >
-					      		<s:property value = "code"/>
-					      </html:multibox>
-		                  <s:property value = "code"/> - <s:property value = "description"/><br>
-		            </s:iterator>
+					<div class="scroll">
+			            <s:iterator value = "allUserGroups">
+						        <s:if test="selectedUserGroupCodes == code">
+						      		<s:checkbox theme="simple" cssStyle="border:0px" name="selectedUserGroupCodes" disabled="true" value="true" />
+						      	</s:if>
+						      	<s:else>
+						      		<s:checkbox theme="simple" cssStyle="border:0px" name="selectedUserGroupCodes" disabled="true" value="false" />
+						      	</s:else>
+			                  	<s:property value = "code"/> - <s:property value = "description"/><br>
+			            </s:iterator>
 		            </div>
 		            </td></tr>
 	      </table>		
