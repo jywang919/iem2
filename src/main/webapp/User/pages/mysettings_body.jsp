@@ -18,7 +18,7 @@
 				<a href="changepassword.action">Change Password</a> 
 			</div></td></tr>
 			<tr><td>
-	              <s:textfield id="loginNameId" name="loginName" label="Login Name"  cols="20" rows="1" />
+	              <s:textfield id="loginNameId" name="loginName" label="Login ID"  cols="20" rows="1" />
 	              <s:textfield name="firstName" label="First Name" cols="20" rows="1" />
 	              <s:textfield name="lastName" label="Last Name" cols="20" rows="1" />
 	              <s:textfield name="middleInitial" label="Middle Initial" cols="1" rows="1"/>
