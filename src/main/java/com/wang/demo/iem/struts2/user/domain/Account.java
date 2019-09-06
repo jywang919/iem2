@@ -17,7 +17,7 @@ public class Account {
 	   
 	   private String email;
 	   
-	   private String smartCardDn;
+	   private String distinguishedName;
 	   
 	   private String selectedUserGroupCodes;
 	   
@@ -88,13 +88,6 @@ public void setEmail(String email) {
 	this.email = email;
 }
 
-public String getSmartCardDn() {
-	return smartCardDn;
-}
-
-public void setSmartCardDn(String smartCardDn) {
-	this.smartCardDn = smartCardDn;
-}
 
 public String getLoginName() {
 	return loginName;
@@ -103,6 +96,15 @@ public String getLoginName() {
 
 public void setLoginName(String loginName) {
 	this.loginName = loginName;
+}
+
+
+public String getDistinguishedName() {
+	return distinguishedName;
+}
+
+public void setDistinguishedName(String distinguishedName) {
+	this.distinguishedName = distinguishedName;
 }
 
 public List<Group> getAllUserGroups() {

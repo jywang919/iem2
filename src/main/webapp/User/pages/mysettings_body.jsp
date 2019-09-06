@@ -1,17 +1,18 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>User Settings</title>
-</head>
-<body>
 
 <%
     request.getSession().setAttribute( "BackURL", request.getRequestURL().toString() + "?" + request.getQueryString() );
 %>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>My Settings</title>
+</head>
+<body>
+
 <table bgcolor="#E9E9E9" border=0 width="100%" height="100%" cellpadding=5 cellspacing=0 class="body">
 	<tr><td>
 		<table width="100%" border=0 cellpadding="5" cellspacing="0" bordercolor="#FFFFFF" bgcolor="#E9E9E9">
@@ -19,21 +20,12 @@
 				<a href="changepassword.action">Change Password</a> 
 			</div></td></tr>
 			<tr><td>
-				<table border=0 width="100%" cellpadding=2 cellspacing=2>
-						<tr><td><div align="right">
-								Login ID: <s:property value = "loginName"/></div>
-							</td></tr>
-							<tr><td><div align="right">First Name: <s:property value = "firstName"/></div>
-							</td></tr>
-						<tr><td><div align="right">Last Name: <s:property value = "lastName"/></div>	
-						</td></tr>
-						<tr><td><div align="right">Middle Initial: <s:property value = "middleInitial"/></div>	
-						</td></tr>
-	                    <tr><td><div align="right">Email Address: <s:property value = "email"/></div>
-	                    </td></tr>
-	                    <tr><td><div align="right">SmartCard DN:  <s:property value = "smartCardDn"/></div>
-	                    </td></tr>
-	             </table>
+	              <s:textfield name="loginName" label="Login ID:" cols="20" rows="1" />
+	              <s:textfield name="firstName" label="First Name:" cols="20" rows="1" />
+	              <s:textfield name="lastName" label="Last Name:" cols="20" rows="1" />
+	              <s:textfield name="middleInitial" label="Middle Initial:" cols="1" rows="1"/>
+	              <s:textfield name="email" label="Email Address:" cols="20" rows="1" />
+	              <s:textfield name="distinguishedName" label="SmartCard DN:" cols="50" rows="1" />
              </td></tr>		
 		</table>
 	</td></tr>

@@ -1,5 +1,7 @@
 package com.wang.demo.iem.struts2.user.action;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +25,7 @@ public class ListSettingsAction extends ActionSupport  implements  RequestAware,
 	
 	private Account account;
 	
+
 	public String execute() {
 		
 		return SUCCESS;
@@ -34,10 +37,12 @@ public class ListSettingsAction extends ActionSupport  implements  RequestAware,
 	
 	public Account getModel() {
 		HttpSession session=ServletActionContext.getRequest().getSession();  
-		account= new Account("Sid","Bacam",99,"NC");
+		account= new Account("Sid","Baccam",99,"NC");
+		account.setMiddleInitial("A.");
 		account.setLoginName((String)session.getAttribute("name"));
 		account.setEmail("Sid.Baccam@iem.com");
-		account.setSmartCardDn("iem001");
+		account.setDistinguishedName("Sid A. Baccam iem001");
+		account.setFirstName("Sid");
 		Group grp = new Group();
 		grp.setCode("001");
 		grp.setDescription("Administration");
@@ -50,13 +55,13 @@ public class ListSettingsAction extends ActionSupport  implements  RequestAware,
 		account.getAllUserGroups().add(grp);
 		
 		account.setSelectedUserGroupCodes(grp.getCode());
+//		accounts.add(account);
 		return account;
 	}
 
 	@Override
 	public void setRequest(Map<String, Object> arg0) {
 		HttpServletRequest req=ServletActionContext.getRequest();  
-//		req.getSession().setAttribute( "BackURL", req.getRequestURL().toString() + "?" + req.getQueryString() );
 	}
 	
 }
