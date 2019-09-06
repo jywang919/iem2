@@ -1,11 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
 <%
     request.getSession().setAttribute( "BackURL", request.getRequestURL().toString() + "?" + request.getQueryString() );
 %>
-
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -20,12 +18,12 @@
 				<a href="changepassword.action">Change Password</a> 
 			</div></td></tr>
 			<tr><td>
-	              <s:textfield name="loginName" label="Login ID:" cols="20" rows="1" />
-	              <s:textfield name="firstName" label="First Name:" cols="20" rows="1" />
-	              <s:textfield name="lastName" label="Last Name:" cols="20" rows="1" />
-	              <s:textfield name="middleInitial" label="Middle Initial:" cols="1" rows="1"/>
-	              <s:textfield name="email" label="Email Address:" cols="20" rows="1" />
-	              <s:textfield name="distinguishedName" label="SmartCard DN:" cols="50" rows="1" />
+	              <s:textfield id="loginNameId" name="loginName" label="Login Name"  cols="20" rows="1" />
+	              <s:textfield name="firstName" label="First Name" cols="20" rows="1" />
+	              <s:textfield name="lastName" label="Last Name" cols="20" rows="1" />
+	              <s:textfield name="middleInitial" label="Middle Initial" cols="1" rows="1"/>
+	              <s:textfield name="email" label="Email Address" cols="20" rows="1" />
+	              <s:textfield name="distinguishedName" label="SmartCard DN" cols="50" rows="1" />   
              </td></tr>		
 		</table>
 	</td></tr>
