@@ -21,7 +21,7 @@
 			<tr><td>
 				<table border=0 width="100%" cellpadding=2 cellspacing=2>
 						<tr><td><div align="right">
-								Login ID:: <s:property value = "loginName"/></div>
+								Login ID: <s:property value = "loginName"/></div>
 							</td></tr>
 							<tr><td><div align="right">First Name: <s:property value = "firstName"/></div>
 							</td></tr>
