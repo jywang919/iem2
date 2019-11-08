@@ -8,12 +8,17 @@
 <body>
 
 <s:actionerror/>
-<s:form>
+<s:form action="Login">
 	<s:hidden name="junkField" value="123" />
 	<s:textfield name="username" label="Username"/>
 	<s:password name="password" label="Password"/>
-	<s:submit action="Login" value="Login"/>
+	<s:submit  value="Login"/>
+	<%-- 
 	<s:submit action="changepassword" value="Change Password"/>
+	--%>
+	<s:form action="changepassword">
+		<s:submit  value="Change Password form"/>
+	</s:form>
 </s:form>
 <p>This is your <s:property value="loginCount" /> times logging in!</p>
 </body>
