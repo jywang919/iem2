@@ -22,3 +22,12 @@
 	
 	otherwise, a failure page will be displayed
 	
+- More than one submit buttons in one form
+	1.	add <constant name="struts.mapper.action.prefix.enabled" value="true" /> to struts.xml
+	2.	buttons in the form e.g.:
+		<s:form>
+			<s:submit action="Login" value="Login"/>
+			<s:submit action="changepassword" value="Change Password"/>
+			
+- Error: Unexpected Exception caught setting 'junkField' on 'class com.wang.demo.iem.struts2.user.action.LoginAction: Error setting expression 'junkField' with value ['123', ]
+	cause login.jsp has a junkField but LoginAction does not have this parameter

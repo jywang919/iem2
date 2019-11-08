@@ -9,6 +9,7 @@
 
 <s:actionerror/>
 <s:form>
+	<s:hidden name="junkField" value="123" />
 	<s:textfield name="username" label="Username"/>
 	<s:password name="password" label="Password"/>
 	<s:submit action="Login" value="Login"/>
