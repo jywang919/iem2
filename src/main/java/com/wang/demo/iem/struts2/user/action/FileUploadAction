@@ -1,0 +1,73 @@
+package com.wang.demo.iem.struts2.user.action;
+
+import java.io.File;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class FileUploadAction extends ActionSupport{
+
+	private File fu;
+	private String fuContentType;
+	private String fuFileName;
+
+//	public String getFileUploadContentType() {
+//		return cType;
+//	}
+
+//	public void setFileUploadContentType(String fileUploadContentType) {
+//		this.cType = fileUploadContentType;
+//	}
+
+	
+//	public String getFileUploadFileName() {
+//		return fileUploadFileName;
+//	}
+//
+//
+//	public void setFileUploadFileName(String fileUploadFileName) {
+//		this.fileUploadFileName = fileUploadFileName;
+//	}
+
+//	public File getFileUpload() {
+//		return fileUpload;
+//	}
+//
+//	public void setFileUpload(File fileUpload) {
+//		this.fileUpload = fileUpload;
+//	}
+
+	public String execute() throws Exception{
+
+		return SUCCESS;
+
+	}
+
+	public File getFu() {
+		return fu;
+	}
+
+	public void setFu(File fu) {
+		this.fu = fu;
+	}
+
+	public String getFuContentType() {
+		return fuContentType;
+	}
+
+	public void setFuContentType(String fuContentType) {
+		this.fuContentType = fuContentType;
+	}
+
+	public String getFuFileName() {
+		return fuFileName;
+	}
+
+	public void setFuFileName(String fuFileName) {
+		this.fuFileName = fuFileName;
+	}
+
+	public String display() {
+		return NONE;
+	}
+
+}
