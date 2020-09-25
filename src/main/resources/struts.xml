@@ -7,8 +7,19 @@
 
 	<constant name="struts.devMode" value="true" />
 	<constant name="struts.mapper.action.prefix.enabled" value="true" />
-	<package name="user" namespace="/User" extends="struts-default">
+	<package name="user" namespace="/User" extends="struts-default">			<interceptors>
+				<interceptor name="ieb-logger"
+					class="com.wang.demo.iem.struts2.user.interceptor.LoggerInterceptor"></interceptor>
+				<interceptor-stack name="iemStack">
+					<interceptor-ref name="ieb-logger"></interceptor-ref>
+					<interceptor-ref name="defaultStack"></interceptor-ref>
+				</interceptor-stack>
+			</interceptors>
+			<default-interceptor-ref name="iemStack"></default-interceptor-ref>
 		<action name="Login" class="com.wang.demo.iem.struts2.user.action.LoginAction">
+			 <!-- 
+			 <interceptor-ref name="logger"/>
+			 -->
 			<result name="SUCCESS">pages/success.jsp</result>
 			<result name="FAILURE">pages/failure.jsp</result>
 			<result name="input">pages/login.jsp</result>
