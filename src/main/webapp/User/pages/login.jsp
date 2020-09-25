@@ -12,7 +12,8 @@
 	<s:hidden name="junkField" value="123" />
 	<s:textfield name="username" label="Username"/>
 	<s:password name="password" label="Password"/>
-	<s:submit  value="Login"/>
+	<s:submit action="Login" value="Login" />
+	<s:submit action="changepassword" value="change password"/>
 	<%-- 
 	<s:submit action="changepassword" value="Change Password"/>
 	--%>
