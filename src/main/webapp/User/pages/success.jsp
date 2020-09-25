@@ -8,5 +8,7 @@
 <body>
 <h4>Login Success. Welcome <s:property value="username"/></h4>
 	<a href="ListSettings.action">My Settings</a> 
+	<h1>${username} - Jeff</h1>
+	<a href="fileUploadAction.action">File Upload</a> 
 </body>
 </html>
