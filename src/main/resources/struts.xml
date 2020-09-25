@@ -26,7 +26,32 @@
 		<action name="changepassword" class="com.wang.demo.iem.struts2.user.action.ListSettingsAction" method="changePassword">
 			<result name="SUCCESS">pages/change_password.jsp</result>
 		</action>
-		
+		<action name="fileUploadAction"
+		    class="com.wang.demo.iem.struts2.user.action.FileUploadAction" method="display">
+		    <result name="none">pages/fileUpload.jsp</result>
+		</action>
+		<action name="resultAction" class="com.wang.demo.iem.struts2.user.action.FileUploadAction">
+		    <interceptor-ref name="exception"/>
+	            <interceptor-ref name="i18n"/>
+	            <interceptor-ref name="fileUpload">
+	       		<param name="allowedTypes">text/xml</param>
+	       		<!-- 
+	       		<param name="allowedTypes">text/plain</param>
+	       		<param name="maximumSize">10240</param> -->
+	  	    </interceptor-ref>
+	            <interceptor-ref name="params">
+	                <param name="excludeParams">dojo\..*,^struts\..*</param>
+	            </interceptor-ref>
+	            <interceptor-ref name="validation">
+	                <param name="excludeMethods">input,back,cancel,browse</param>
+	            </interceptor-ref>
+	            <interceptor-ref name="workflow">
+	                <param name="excludeMethods">input,back,cancel,browse</param>
+	            </interceptor-ref>
+	
+		    <result name="success">pages/fileUploadResult.jsp</result>
+		    <result name="input">pages/fileUpload.jsp</result>
+		</action>
 	</package>
 	
 </struts>
